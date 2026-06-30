@@ -3,7 +3,7 @@ import functools
 from datetime import datetime
 from contextlib import contextmanager
 from dataclasses import dataclass
-import time
+from time import time
 
 
 def profileit(
@@ -44,10 +44,6 @@ class Timing:
     duration: float = None
 
 
-def test_func():
-    time.sleep(1);
-    return;
-
 @contextmanager
 def timeit():
     t = Timing(start=time())
@@ -57,6 +53,3 @@ def timeit():
         end = time()
         t.stop = end
         t.duration = end - t.start
-
-for i in range(5):
-    test_func()
