@@ -9,7 +9,7 @@ from time import time
 def profileit(
     func=None,
     /, *,
-    file_format='profiling/{func.__name__}-{dt}.profile',
+    file_format='profiling/{func.__name__}.profile',
 ):
     """
     Creates a cProfile file for each call to a function.
